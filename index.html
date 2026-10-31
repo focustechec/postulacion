@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postulación – Focus Talento Humano</title>
+  <meta name="description" content="Postula a las vacantes abiertas de Focus.">
+  <style>
+    html, body { margin: 0; height: 100%; background: #f3f4f6; }
+    iframe { display: block; border: 0; width: 100%; height: 100vh; height: 100dvh; }
+  </style>
+</head>
+<body>
+  <iframe id="formulario" title="Formulario de postulación"></iframe>
+  <script>
+    // Formulario real (Apps Script). Se muestra dentro de esta página.
+    var BASE = 'https://script.google.com/macros/s/AKfycbykt1M8mzRaOH5BDa5nhl1_6JB8Nwe-jEJ-1S8hSeB626WAkNYiyy1prr8p--UQhx6C2w/exec';
+    var req = new URLSearchParams(location.search).get('req') || '';
+    document.getElementById('formulario').src = BASE + (req ? '?req=' + encodeURIComponent(req) : '');
+  </script>
+</body>
+</html>
