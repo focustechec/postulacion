@@ -15,9 +15,9 @@
   <iframe id="formulario" title="Formulario de postulación"></iframe>
   <script>
     // Formulario real (Apps Script). Se muestra dentro de esta página.
-    var BASE = 'https://script.google.com/macros/s/AKfycbykt1M8mzRaOH5BDa5nhl1_6JB8Nwe-jEJ-1S8hSeB626WAkNYiyy1prr8p--UQhx6C2w/exec';
+    var BASE = 'https://script.google.com/macros/s/AKfycbyxsuNKToipo7umi3vt60KRjV4mCeCxRsoKswBwApzkzcvCcxt1dpTzzFKDP9WkX6x2QA/exec';
     var req = new URLSearchParams(location.search).get('req') || '';
-    document.getElementById('formulario').src = BASE + (req ? '?req=' + encodeURIComponent(req) : '');
+    document.getElementById('formulario').src = BASE + '?' + (req ? 'req=' + encodeURIComponent(req) : 'postular=1');
   </script>
 </body>
 </html>
